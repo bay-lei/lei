@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .bg {
+            background-color: grey;
+        }
+
+        @font-face {
+            font-family: 'iconfont';
+            src: url('font/iconfont.eot?t=1635578554943');
+            /* IE9 */
+            src: url('font/iconfont.eot?t=1635578554943#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('font/iconfont.woff2?t=1635578554943') format('woff2'),
+                url('font/iconfont.woff?t=1635578554943') format('woff'),
+                url('font/iconfont.ttf?t=1635578554943') format('truetype'),
+                url('font/iconfont.svg?t=1635578554943#iconfont') format('svg');
+        }
+
+        .iconfont,
+        .iconfont_2,
+        .iconfont_3,
+        .iconfont_4,
+        .iconfont_5,
+        .iconfont_6 {
+            font-style: normal;
+            font-family: "iconfont" !important;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .iconfont {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            font-size: 20px;
+            color: grey;
+
+        }
+
+        .iconfont_2 {
+            font-size: 20px;
+            color: rgb(156, 221, 144);
+        }
+
+        .iconfont_3 {
+            font-size: 20px;
+            color: rgb(80, 200, 253);
+        }
+
+        .iconfont_4 {
+            font-size: 20px;
+            color: rgb(251, 102, 34);
+        }
+
+        .iconfont_5 {
+            font-size: 20px;
+            color: rgb(15, 136, 235);
+        }
+
+        .iconfont_6 {
+            font-size: 20px;
+            color: rgb(0, 102, 255);
+        }
+
+
+        .box {
+            width: 400px;
+            height: 495px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+
+        .select {
+            position: relative;
+            font-size: 16px;
+        }
+
+        .select img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+
+        .select>span {
+            height: 18px;
+            padding: 0 24px;
+            display: inline-block;
+        }
+
+        .chick {
+            padding: 20px 0 18px 0 !important;
+            font-weight: 700;
+            border-bottom: solid #0084ff;
+        }
+
+        .box_form input {
+            width: 100%;
+            height: 42px;
+            border: none;
+            border-bottom: solid 0.5px;
+            margin-top: 15px;
+        }
+
+        .box_form {
+            margin-top: 20px;
+            padding: 0 24px;
+        }
+
+        .input {
+            position: relative;
+        }
+
+        .a1 {
+            float: right;
+        }
+
+        .box_form>a {
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        .login button {
+            display: block;
+            width: 100%;
+            height: 36px;
+            background-color: #06f;
+            margin-top: 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .tip1 {
+            margin-top: 25px;
+            padding: 12px 24px;
+
+        }
+
+        .tip {
+
+            font-size: 13px;
+            color: grey;
+            border-bottom: solid 1px;
+            padding-bottom: 12px;
+        }
+
+        .socialLogin {
+            height: 60px;
+            line-height: 60px;
+            padding: 0 24px;
+        }
+
+        .plan_1 {
+            width: 90px;
+            color: grey;
+        }
+
+        .plan_2 {
+
+            width: 200px;
+        }
+
+        .plan_2>a {
+            display: inline-block;
+            font-size: 14px;
+            float: right;
+            margin: 0 6px;
+            color: grey;
+        }
+
+        .footer {
+            height: 60px;
+            line-height: 60px;
+            padding: 0 24px;
+            background-color: rgb(246, 246, 246);
+        }
+
+        .footer a {
+            font-size: 15px;
+        }
+
+        .footer_l {
+            float: left;
+            width: 175px;
+        }
+
+        .footer_l a {
+            display: inline-block;
+            width: 175px;
+            height: 20px;
+        }
+
+        .footer_r {
+            float: right;
+            text-align: right;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="box">
+            <div class="select">
+                <span>免密码登录</span>
+                <span class="chick"> 密码登录</span>
+                <img src="img/img.png" alt="">
+            </div>
+            <div class="box_form">
+                <input type="text" name="userName" placeholder="手机号或邮箱">
+                <div class="input">
+                    <input type="password" name="password" placeholder="密码">
+                    <span class="iconfont">&#xe8c7;</span>
+                </div>
+                <a href="#">海外手机号登录</a>
+                <a href="#" class="a1">忘记密码？</a>
+                <div class="login">
+                    <button>登录</button>
+                </div>
+            </div>
+            <div class="tip1">
+                <div class="tip">
+                    未注册手机验证后自动登录，注册即代表同意
+                    <a href="#">《知乎协议》</a>
+                    <a href="#">《隐私保护指引》</a>
+                </div>
+            </div>
+            <div class="socialLogin">
+                <span class="plan_1">社交账号登录</span>
+                <span class="plan_2">
+                    <a href="#"><span class="iconfont_2">&#xe62f;</span> 微信</a>
+                    <a href="#"><span class="iconfont_3">&#xe882;</span> QQ</a>
+                    <a href="#"><span class="iconfont_4">&#xe641;</span> 微博</a>
+                </span>
+            </div>
+            <div class="footer">
+                <div class="footer_l">
+                    <a href="#"><span class="iconfont_5">&#xe63b;</span>开通机构号</a>
+                </div>
+                <div class="footer_r">
+                    <a href="#"><span class="iconfont_6">&#xe611;</span>下载知乎App</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
