@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .size1 {
+            font-size: 10px;
+        }
+
+        .size2 {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id='color'>主题颜色更改</button>
+    <button id='font-size'>字体大小更改</button>
+    <p>学前端真快乐</p>
+    <script>
+        let btn1 = document.querySelector('#color');
+        let btn2 = document.querySelector('#font-size');
+        let p = document.querySelector('p');
+        let flag = 1;
+        let flag2 = 0;
+        btn1.onclick = function () {
+            if (flag == 1) {
+                document.body.style.backgroundColor = 'blue';
+                flag = 0;
+            } else {
+                document.body.style.backgroundColor = '';
+                flag = 1;
+            }
+
+        }
+        btn2.onclick = function () {
+            if (flag2 == 0) {
+                p.className = 'size1';
+                flag2 = 1;
+            } else if (flag2 == 1) {
+                p.className = 'size2';
+                flag2 = 2;
+            } else {
+                p.className = '';
+                flag2 = 0;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
