@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            text-align: center;
+        }
+
+        #search {
+            width: 300px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        #btn {
+            width: 60px;
+            height: 35px;
+            background-color: #C20;
+        }
+
+        .add {
+
+            border-right: solid 1px black;
+        }
+
+        .box {
+            margin: 20px 0;
+        }
+
+        #title {
+            width: 500px;
+        }
+
+        #singer,
+        #album {
+            width: 250px;
+        }
+
+        tr :hover {
+            background-color: #DCDCDC;
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <input type="text" placeholder="输入歌曲或歌手" id="search">
+        <button id="btn">搜索</button>
+    </div>
+    <div class="box">
+        <table id="biaoge">
+            <tr>
+                <th id="title" class="add">音乐标题</th>
+                <th id="singer" class="add">歌手</th>
+                <th id="album" class="add">专辑</th>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="level4.js"></script>
+</body>
+
+</html>
