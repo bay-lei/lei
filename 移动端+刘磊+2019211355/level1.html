@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .header {
+            height: 40px;
+            background-color: rgb(49, 124, 251);
+        }
+
+        .header ul li {
+            float: left;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .header ul li:nth-child(1) {
+            width: 10%;
+        }
+
+        .header ul li:nth-child(1) img {
+            height: 20px;
+            vertical-align: middle;
+        }
+
+        .header ul li:nth-child(2) {
+            width: 80%;
+        }
+
+        .header ul li:nth-child(3) {
+            width: 10%;
+        }
+
+        .header ul li:nth-child(3) img {
+            height: 20px;
+            vertical-align: middle;
+        }
+
+        .mid {
+            height: 45px;
+            border-bottom: solid 0.1px rgb(193, 193, 193);
+        }
+
+        .mid ul li {
+            float: left;
+            height: 40px;
+            color: black;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .mid ul li span {
+            background-color: rgb(193, 193, 193);
+            border-radius: 50%;
+            color: #fff;
+        }
+
+        .mid ul li:nth-child(1) {
+            width: 35%;
+            text-align: right;
+        }
+
+        .mid ul li:nth-child(2) {
+            width: 30%;
+        }
+
+        .mid ul li:nth-child(3) {
+            width: 35%;
+            text-align: left;
+        }
+
+        #biaoge {
+            color: rgb(49, 124, 251);
+            border-spacing: 20px;
+        }
+
+        #biaoge tr {
+            width: 100%;
+        }
+
+        #biaoge tr td:nth-child(1) {
+            width: 25%;
+            text-align: center;
+            border-right: solid 1px rgb(193, 193, 193);
+        }
+
+        #biaoge tr td:nth-child(2) {
+            width: 75%;
+        }
+
+        .back {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            border-radius: 50%;
+            box-shadow: 0px 1px black;
+            background-color: #fff;
+            font-size: 20px;
+            color: blue;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #select {
+            position: fixed;
+            top: 40px;
+            width: 100%;
+            overflow: hidden;
+            height: 0;
+            text-align: center;
+            background-color: #fff;
+            z-index: 100;
+        }
+
+        #select ul li {
+            padding: 10px 0;
+            border-bottom: solid 0.5px #333;
+        }
+
+        #mask {
+            position: fixed;
+            top: 40px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>
+                <img src="imges/zhuye.png" alt="">
+            </li>
+            <li>历史上的今天</li>
+            <li id="mulu"><img src="imges/mulu.png" alt="" id="change"></li>
+        </ul>
+    </div>
+    <div class="mid">
+        <ul>
+            <li><span>&lt;</span></li>
+            <li id="date"></li>
+            <li><span>&gt;</span></li>
+        </ul>
+    </div>
+    <table id="biaoge">
+
+    </table>
+    <div class="back">^</div>
+    <div id="select">
+        <ul>
+            <li>电话区号查询</li>
+            <li>手机号码查询</li>
+            <li>万年历查询</li>
+            <li>北京时间查询</li>
+            <li>IP地址查询</li>
+        </ul>
+    </div>
+    <div id="mask"></div>
+    <script>
+        let date = document.getElementById('date');
+        let table = document.getElementById('biaoge');
+        let mulu = document.getElementById('mulu');
+        let select = document.getElementById('select');
+        let img = document.getElementById('change');
+        let mask = document.getElementById('mask');
+        let flag = 0;
+        const xhr = new XMLHttpRequest();
+        xhr.open("get", "https://api.oick.cn/lishi/api.php", true);
+        xhr.send(null);
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                    const res = JSON.parse(xhr.response);
+                    show(res);
+                }
+            }
+        }
+        function show(res) {
+            let da = res.day.split("/");
+            date.innerHTML = da[0] + "月" + da[1] + "日";
+            for (var i = 0; i < res.result.length; i++) {
+                let a = document.createElement('tr');
+                let t1 = document.createElement('td');
+                let t2 = document.createElement('td');
+                t1.innerHTML = res.result[i].date.split("年")[0] + "年";
+                t2.innerHTML = res.result[i].title;
+                a.appendChild(t1);
+                a.appendChild(t2);
+                table.appendChild(a);
+            }
+        }
+        mulu.addEventListener('click', () => {
+            if (flag === 0) {
+                select.style.transition = 0.1 + "s";
+                select.style.height = 208 + "px";
+                img.src = "imges/cuowu.png";
+                mask.style.display = "block";
+                flag = 1;
+            } else {
+                select.style.transition = 0.1 + "s";
+                select.style.height = 0 + "px";
+                img.src = "imges/mulu.png";
+                mask.style.display = "none";
+                flag = 0;
+            }
+        })
+    </script>
+</body>
+
+</html>
