@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://mockjs.com/dist/mock.js"></script>
+    <script>
+        //5->0,1,2,3,4
+        // for (var i = 0; i < 5; i++) {
+        //     (function (x) {
+        //         setTimeout(function () {
+        //             console.log(x++);
+        //         }, 1000);
+        //     })(i);
+        // }
+        // console.log(i);
+
+
+        //立即输出 0，之后每隔 1 秒依次输出 1,2,3,4,5
+        for (var i = 0; i < 5; i++) {
+            (function (j) {
+                setTimeout(function () {
+                    console.log(j);
+                }, 1000 * i);
+            })(i);
+        }
+        setTimeout(function () {
+            console.log(i);
+        }, 1000 * i);
+
+
+    </script>
+</head>
+
+<body>
+    <div></div>
+
+</body>
+
+</html>

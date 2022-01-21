@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨迹天气</title>
+
+    <link rel="stylesheet" type="text/css" href="moji.css">
+    <script src="echarts.min.js"></script>
+    <script src="http://mockjs.com/dist/mock.js"></script>
+
+</head>
+
+<body>
+    <div class="index">
+        <div class="index-1">
+            <div class="header">
+                <div class="search_btn"></div>
+                <div class="city">重庆市</div>
+            </div>
+
+            <div class="infor">
+                <a href="https://html5.moji.com/tpd/gzbd/index.html">
+                    <img src="img/zixun.png" alt="" style="width: 26px;
+                        margin-right: 8px;
+                        height: 26px;
+                        margin-top: -4px;">疫情资讯
+                </a>
+                <a href="https://html5.moji.com/tpd/safetravel/safetravel.html?t=1580984067263">
+                    <img src="img/safe.png" alt="" style="width: 26px;
+                        margin-right: 8px;
+                        height: 26px;
+                        margin-top: -4px;">安全出行
+                </a>
+            </div>
+            <div class="info">
+                <div class="info_wea">晴</div>
+                <div class="info_about">
+                    <em>25</em>
+                    <p>东北风1级 湿度65%</p>
+                    <p> 天冷了，该加衣服了!</p>
+                    <a href="#">
+                        <span><img src="img/leaf.png" alt=""
+                                style="width: 1.4rem;display: inline-block;vertical-align: middle"></span>
+                        <strong>93 良</strong>
+                    </a>
+                </div>
+            </div>
+            <div class="days">
+                <div class="single" style="border-right: solid 1px gray;">
+                    <div>
+                        <em style='font-style: normal;'>今天</em>
+                        <span>良</span>
+                        <b id='single_today'>7 / 12°</b>
+                    </div>
+                    <div id='today_text'>小雨</div>
+                </div>
+                <div class="single">
+                    <div>
+                        <em style='font-style: normal;'>明天</em>
+                        <span>轻度</span>
+                        <b id='single_toma'>7 / 12°</b>
+                    </div>
+                    <div id='toma_text'>多云</div>
+                </div>
+            </div>
+            <div class="wind">
+                <div class="tabs">
+                    <strong>日落 18:50</strong>
+                    <span style='border-bottom: solid 1px #fff;'>温度</span>
+                    <span>风力</span>
+                    <em class='btn'>24小时
+                        <img src="img/down-circle.png" alt="">
+                    </em>
+                </div>
+                <div class="charts">
+
+                </div>
+            </div>
+            <div class="weak_wea">
+                <div id='week_tem'></div>
+                <ul>
+                    <li>
+                        <p>周一</p>
+                        <p>阴</p>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <p>阴</p>
+                        <p class='level'>良</p>
+                        <dl>
+                            <dd>北风</dd>
+                            <dd>1级</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <p>周二</p>
+                        <p>晴</p>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <p>晴</p>
+                        <p class='level'>良</p>
+                        <dl>
+                            <dd>北风</dd>
+                            <dd>1级</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <p>周三</p>
+                        <p>多云</p>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <p>阴</p>
+                        <p class='level'>良</p>
+                        <dl>
+                            <dd>北风</dd>
+                            <dd>1级</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <p>周四</p>
+                        <p>小雨</p>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <p>晴</p>
+                        <p class='level'>良</p>
+                        <dl>
+                            <dd>北风</dd>
+                            <dd>1级</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <p>周五</p>
+                        <p>阴</p>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <p>晴</p>
+                        <p class='level'>良</p>
+                        <dl>
+                            <dd>北风</dd>
+                            <dd>1级</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <p>周六</p>
+                        <p>阴</p>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <p>阴</p>
+                        <p class='level'>良</p>
+                        <dl>
+                            <dd>北风</dd>
+                            <dd>1级</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="exponent">
+                <ul id='qweather'>
+                    <li><span><img src="img/sport.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/fish.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/12.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                    <li><span><img src="img/default.png" alt=""></span></li>
+                </ul>
+            </div>
+            <div class="footer">本页面由 墨迹天气 提供</div>
+
+        </div>
+        <!-- search page start -->
+        <div class="index-2" style="display:none">
+            <div class="head">
+                <div class="return"></div>
+                <div class="box">
+                    <input type="text" placeholder="请输入城市名" class="js_input">
+                </div>
+            </div>
+            <div class="city_list">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="tips">
+                <div>当前城市</div>
+                <ul>
+                    <li>重庆市</li>
+                </ul>
+            </div>
+            <div class="addcity clearfix">
+                <div>添加城市</div>
+                <div class='delete'>删除</div>
+                <ul>
+                    <li>北京市</li>
+                </ul>
+            </div>
+            <div class="hotcity clearfix">
+                <div>热搜城市</div>
+                <ul>
+                    <li>北京市</li>
+                    <li>上海市</li>
+                    <li>广州市</li>
+                    <li>深圳市</li>
+                    <li>杭州市</li>
+                    <li>沈阳市</li>
+                    <li>大连市</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="moji.js"></script>
+
+
+</body>
+
+</html>

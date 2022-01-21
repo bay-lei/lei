@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+body {
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+.index {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #0d5aa5;
+}
+
+.index-1 {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 40.31px;
+    text-align: center;
+    line-height: 40.31px;
+}
+
+.header .search_btn {
+
+    width: 15.68px;
+    height: 15.68px;
+    margin: 0 3.36px 0 0;
+    background: url(img/location.png) center center no-repeat rgba(0, 0, 0, .2);
+    background-size: 6.5px 6.5px;
+    border-radius: 15.68px;
+    text-align: center;
+
+}
+
+.city {
+    height: 20.16px;
+    max-width: 16rem;
+    margin: 0 0 0 3.36px;
+    color: #fff;
+    font-size: 15.68px;
+    line-height: 20.16px;
+}
+
+.header,
+.search_btn,
+.city {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.index-2 {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+
+.head {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    margin: 11px;
+}
+.city_list{
+    position: absolute;
+    left: 0;
+    top: 55px;
+    width: 100%;
+    font-size: 13.44px;
+    color: black;
+    background-color: #f1f0f6;
+}
+.city_list ul li{
+    height: 38px;
+    line-height: 38px;
+    border-bottom: solid 1px gray;
+    margin: 0 10px 0 10px;
+}
+
+.return {
+    float: left;
+    width: 28px;
+    height: 100%;
+    background: url(img/return.png) center center no-repeat;
+    background-size: 1rem 1.5rem;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4rem;
+    margin: 0 0 0 30px;
+}
+
+.js_input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 337px;
+    height: 47px;
+    border-radius: 5px;
+    border: 0.5px solid gray;
+}
+.index-2 .tips,
+.index-2 .addcity,
+.index-2 .hotcity{
+    width: 100%;
+    font-size: 13.44px;
+    color: gray;
+    margin-left:10px;
+}
+.addcity{
+    position: relative;
+    margin-bottom: 31px;
+}
+.delete{
+    font-size: 13.44px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.tips ul li,
+.addcity ul li{
+    display: inline-block;
+    width: 111px;
+    height: 36px;
+    border:solid 1px #0d5aa5;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 36px;
+    margin:10px 0 31px 0;
+    background-color: #fff;
+}
+.addcity ul li{
+    float: left;
+    border:solid 1px gray;
+    margin:11px 13px 0 0;
+}
+
+.hotcity ul li
+{
+    display: inline-block;
+    float: left;
+    width: 111px;
+    height: 36px;
+    border:solid 1px gray;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 36px;
+    margin:11px 13px 0 0;
+    background-color: #fff;
+}
+
+.infor {
+    width: 100%;
+    height: 38px;
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 15px;
+}
+
+.infor a {
+    display: inline-block;
+    background-color: #336699;
+    width: 138px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 18px;
+    color: #ffffff;
+    height: 100%;
+    line-height: 38px;
+    text-decoration: none;
+}
+
+.infor a img {
+    vertical-align: middle;
+}
+
+.infor a:nth-child(1) {
+    float: left;
+    margin-left: 20px;
+}
+
+.infor a:nth-child(2) {
+    float: right;
+    margin-right: 20px;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    height: 235px;
+    border-bottom: solid 1px gray;
+}
+
+.info_wea {
+    width: 100%;
+    height: 23px;
+    padding: 58px 0px 0px 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.info_about {
+    width: 100%;
+    height: 136px;
+    /* background-color: pink; */
+}
+
+.info_about p {
+    font-size: 13.44px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.info_about em {
+    position: relative;
+    font-size: 100.8px;
+    color: #fff;
+    margin-left: 20px;
+    font-family: Arial;
+    font-style: normal;
+}
+
+.info_about em::after {
+    position: absolute;
+    top: 1.3rem;
+    right: -1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 2rem;
+    line-height: 1;
+    content: '°';
+}
+
+.info_about a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 87px;
+    height: 33px;
+    border-radius: 16.5px;
+    text-align: center;
+    line-height: 33px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #336699;
+    font-size: 13.44px;
+}
+
+.days {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+}
+.days b{
+   float: right;
+   font-weight: 400;
+}
+
+.single {
+    width: 50%;
+    height: 100%;
+    padding: 0px 10px 0 10px;
+}
+
+.single div {
+    width: 100%;
+    height: 50%;
+    line-height: 32px;
+    font-size: 13.44px;
+    padding: 0px 10px 0 0px;
+}
+
+.single div span {
+    display: inline-block;
+    width: 33px;
+    height: 18px;
+    margin: 0 0 0 10px;
+    text-align: center;
+    border-radius: 0.7rem;
+    line-height: 18px;
+    background-color: rgb(215, 175, 14);
+}
+
+.wind {
+    width: 100%;
+    height: 29px;
+    background: rgba(255, 255, 255, .2);
+}
+
+.tabs {
+    width: 100%;
+    height: 28px;
+    border-bottom: solid 1px gray;
+}
+.wind .tabs strong{
+    float: left;
+    line-height: 27px;
+    margin: 0 10px;
+    font-weight: 400;
+    font-size: 13.44px;
+    text-align: center;
+}
+.wind .tabs span{
+    display: none;
+    width: 48px;
+    height: 100%;
+    font-size: 13.44px;
+    line-height: 27px;
+    text-align: center;
+}
+.wind .tabs .btn{
+    font-size: 13.44px;
+    font-style: normal;
+    float: right;
+    height: 1.5rem;
+    margin: 0 10px 0 0;
+    color: #fff;
+    line-height: 1.5rem;
+}
+.wind .tabs .btn img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.active{
+    background: url(img/btn.png) right bottom no-repeat;
+    background-size: 1.5rem auto;
+    border: 0;
+}
+
+.charts {
+  width: 100%;
+  height: 108px;
+  display: none;
+  background-color: blue;
+}
+
+.weak_wea {
+    position: relative;
+    width: 100%;
+    height: 351px;
+    margin: 16px 0px 0 0px;
+    border-bottom: solid 1px gray;
+}
+
+.weak_wea li {
+    float: left;
+    width: 16.66%;
+    height: 351px;
+    text-align: center;
+    font-size: 13.44px;
+}
+.weak_wea>div{
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    width: 100%;
+    height: 50%;
+}
+.level{ 
+    width: 33px;
+    height: 18px;
+    margin: 0 0 0 10px;
+    text-align: center;
+    border-radius: 0.7rem;
+    line-height: 18px;
+    background-color: rgb(215, 175, 14);
+    margin:10px 0 0 15px;
+}
+.weak_wea li  p{
+    margin-top: 10px;
+}
+.weak_wea li img{
+    margin-top: 180px;
+}
+.weak_wea li  dl{
+    padding:14px 0 11px 0;
+}
+.weak_wea li  dl dd{
+   
+}
+
+
+.exponent {
+    width: 100%;
+    height: 1255px;
+    margin: 0 auto;
+    border-bottom: solid 1px gray;
+}
+
+.exponent ul li {
+    float: left;
+    display: inline-block;
+    width: 33%;
+    height: 113px;
+    border: solid 1px gray;
+    border-width: 0 1px 1px 0;
+    text-align: center;
+}
+.exponent ul li span{
+    display: block;
+    margin-top: 30px;
+}
+.exponent ul li span img{
+    max-height: 100%;
+    display: inline-block;
+    width: 38px;
+    height: 34px;
+    vertical-align: middle;
+}
+.exponent ul li em{
+    height: 3rem;
+    color: #fff;
+    font-size: 13.44px;
+    font-style: normal;
+    line-height: 1.5rem
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 18px;
+    background: rgba(255, 255, 255, .2);
+}
